@@ -80,6 +80,10 @@ const Error = styled.h1`
         width: 80px;
         margin-right: -70px;
   }
+    @media screen and (min-width: 900px) {
+        font-size: 15px;
+        width: 100px;
+    }
 `
 
 const Input = styled.input`
@@ -94,7 +98,11 @@ const Input = styled.input`
         width: 253px;
         margin-right: -105px;
         transform: translateX(-59px);
-  }
+    }
+    @media screen and (min-width: 900px) {
+        font-size: 18px;
+        transform: translateX(-102px);
+    }
 `
 
 const Button = styled.button`
@@ -106,9 +114,14 @@ const Button = styled.button`
     background-color: var(--blue);
     font-weight: 700;
     color: var(--white);
+    cursor: pointer;
+
+    &:hover {
+    background-color: #60abff;
+  }
 
     @media screen and (min-width: 600px) {
         width: 106px;
         height: 50px;
-  }
+    }
 `

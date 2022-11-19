@@ -18,8 +18,11 @@ const Wrapper = styled.div`
     justify-content: space-between;
     margin-bottom: 35px;
     @media screen and (min-width: 600px) {
-    width: 570px;
-  }
+        width: 570px;
+    }
+    @media screen and (min-width: 900px) {
+        width: 730px;
+    }
 `
 
 const Text = styled.h1`
