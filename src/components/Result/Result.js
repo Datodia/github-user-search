@@ -11,8 +11,10 @@ export const Result = ({ data, dark }) => {
             <Header>
                 <Img src={data.avatar_url} />
                 <About>
-                    <Name dark={dark}>{data.name}</Name>
-                    <Login>@{data.login}</Login>
+                    <Div>
+                        <Name dark={dark}>{data.name}</Name>
+                        <Login>@{data.login}</Login>
+                    </Div>
                     <Joined dark={dark}>Joind {date}</Joined>
                 </About>
             </Header>
@@ -67,6 +69,10 @@ const Wrapper = styled.div`
     padding: 32px 24px;
     @media screen and (min-width: 600px) {
         padding: 40px; 
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+    @media screen and (min-width: 900px) {
+        height: 444px;
     }
 `
 
@@ -76,6 +82,7 @@ const Header = styled.div`
     @media screen and (min-width: 600px) {
         gap: 41px; 
     }
+
 `
 
 const Img = styled.img`
@@ -86,7 +93,15 @@ const Img = styled.img`
     }
 `
 const About = styled.div`
+    @media screen and (min-width: 900px) {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+`
 
+const Div = styled.div`
 `
 const Name = styled.h1`
     font-size: 16px;
@@ -126,6 +141,15 @@ const Bio = styled.h1`
     @media screen and (min-width: 600px) {
         font-size: 15px;
     }
+    @media screen and (min-width: 900px) {
+        width: 480px;
+        display: flex;
+        margin: 0 164px;
+        justify-content: center;
+        text-align: justify;
+        transform: translateY(-30px);
+    }
+    
 `
 
 const Followers = styled.div`
@@ -137,6 +161,11 @@ const Followers = styled.div`
     justify-content: space-between;
     padding: 0 30px;
     transition: all .5s;
+    @media screen and (min-width: 900px) {
+        width: 480px;
+        transform: translate(162px, -30px);
+
+    }
 `
 
 const Repo = styled.div`
@@ -172,6 +201,10 @@ const Social = styled.div`
         justify-content: space-between;
         gap: 50px;
         margin-top: 30px;
+    }
+    @media screen and (min-width: 900px) {
+        width: 480px;
+        transform: translate(162px, -30px);
     }
 `
 
