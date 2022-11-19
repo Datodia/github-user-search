@@ -1,25 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import styled from 'styled-components'
+import { Result } from './components/Result/Result';
+import { Search } from './components/Search/Search';
+import { Title } from './components/Title/Title';
+import { useState } from 'react';
 
 function App() {
+  const [dark, setDark] = useState(false)
+  const [name, setName] = useState("datodia")
+  const [data, setData] = useState({})
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Main dark={dark}>
+      <Title setDark={setDark} dark={dark} />
+      <Container>
+        <Search dark={dark} name={name} setName={setName} setData={setData} />
+        <Result data={data} dark={dark} />
+      </Container>
+    </Main>
   );
 }
+
+const Main = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: ${props => props.dark ? "var(--black)" : "var(--body)"};
+  transition: all .5s;
+`
+
+const Container = styled.div`
+  width: 327px;
+  height: 600px;
+  border: 2px solid red;
+`
 
 export default App;
