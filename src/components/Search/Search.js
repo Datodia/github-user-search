@@ -61,6 +61,11 @@ const Wrapper = styled.div`
     justify-content: space-between;
     padding: 0 10px;
     transition: all .5s;
+
+    @media screen and (min-width: 600px) {
+        padding: 0 15px 0 32px;
+        height: 69px;
+  }
 `
 
 const Img = styled.img`
@@ -71,6 +76,10 @@ const Error = styled.h1`
     color: red;
     width: 40px;
     text-align: center;
+    @media screen and (min-width: 600px) {
+        width: 80px;
+        margin-right: -70px;
+  }
 `
 
 const Input = styled.input`
@@ -81,7 +90,11 @@ const Input = styled.input`
     outline: none;
     font-size: 13px;
     font-family: 'Space Mono';
-    /* margin-right: 40px; */
+    @media screen and (min-width: 600px) {
+        width: 253px;
+        margin-right: -105px;
+        transform: translateX(-59px);
+  }
 `
 
 const Button = styled.button`
@@ -93,4 +106,9 @@ const Button = styled.button`
     background-color: var(--blue);
     font-weight: 700;
     color: var(--white);
+
+    @media screen and (min-width: 600px) {
+        width: 106px;
+        height: 50px;
+  }
 `

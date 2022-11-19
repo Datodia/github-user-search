@@ -17,6 +17,9 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     margin-bottom: 35px;
+    @media screen and (min-width: 600px) {
+    width: 570px;
+  }
 `
 
 const Text = styled.h1`

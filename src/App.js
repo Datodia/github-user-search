@@ -36,6 +36,11 @@ const Container = styled.div`
   width: 327px;
   height: 600px;
   border: 2px solid red;
+
+  @media screen and (min-width: 600px) {
+    width: 573px;
+    height: 591px;
+  }
 `
 
 export default App;

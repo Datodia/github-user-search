@@ -65,16 +65,25 @@ const Wrapper = styled.div`
     transition: all .5s;
     margin-top: 16px;
     padding: 32px 24px;
+    @media screen and (min-width: 600px) {
+        padding: 40px; 
+    }
 `
 
 const Header = styled.div`
     display: flex;
     gap: 20px;
+    @media screen and (min-width: 600px) {
+        gap: 41px; 
+    }
 `
 
 const Img = styled.img`
     width: 70px;
     border-radius: 50%;
+    @media screen and (min-width: 600px) {
+        width: 117px; 
+    }
 `
 const About = styled.div`
 
@@ -84,17 +93,28 @@ const Name = styled.h1`
     font-weight: 700;
     color: ${props => props.dark ? 'var(--white)' : 'var(--black)'};
     transition: all .5s;
+    @media screen and (min-width: 600px) {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
 `
 const Login = styled.h1`
     font-size: 13px;
     color: var(--blue);
     font-weight: 400;
+    @media screen and (min-width: 600px) {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
 `
 const Joined = styled.h1`
     font-size: 13px;
     font-weight: 300;
     color: ${props => props.dark ? 'var(--white)' : 'var(--gray)'};
     transition: all .5s;
+    @media screen and (min-width: 600px) {
+        font-size: 15px;
+    }
 `
 
 const Bio = styled.h1`
@@ -103,6 +123,9 @@ const Bio = styled.h1`
     text-align: center;
     color: ${props => props.dark ? 'var(--white)' : 'var(--gray)'};
     transition: all .5s;
+    @media screen and (min-width: 600px) {
+        font-size: 15px;
+    }
 `
 
 const Followers = styled.div`
@@ -128,16 +151,28 @@ const RepoText = styled.h1`
     font-weight: 400;
     color: ${props => props.dark ? "var(--white)" : 'var(--gray)'};
     transition: all .5s;
+    @media screen and (min-width: 600px) {
+        font-size: 13px; 
+    }
 `
 const Number = styled.h1`
     font-size: 16px;
     margin-top: 8px;
     color: ${props => props.dark ? 'var(--white)' : 'var(--black)'};
     transition: all .5s;
+    @media screen and (min-width: 600px) {
+       font-size: 22px; 
+    }
 `
 
 const Social = styled.div`
-
+    @media screen and (min-width: 600px) {
+        width: 100%;
+        display: flex; 
+        justify-content: space-between;
+        gap: 50px;
+        margin-top: 30px;
+    }
 `
 
 const SocGroup = styled.div`
@@ -161,6 +196,9 @@ const LinkText = styled.h1`
     transition: all .5s;
     width: 220px;
     word-break: break-all;
+    @media screen and (min-width: 600px) {
+       font-size: 15px;
+    }
 `
 
 const LinkLink = styled.a`
@@ -170,4 +208,7 @@ const LinkLink = styled.a`
     transition: all .5s;
     width: 220px;
     word-break: break-all;
+    @media screen and (min-width: 600px) {
+       font-size: 15px;
+    }
 `
