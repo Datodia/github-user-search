@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 function App() {
   const [dark, setDark] = useState(false)
-  const [name, setName] = useState("datodia")
+  const [name, setName] = useState("")
   const [data, setData] = useState({})
 
   return (

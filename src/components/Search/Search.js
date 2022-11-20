@@ -6,9 +6,15 @@ import { useState, useEffect } from 'react'
 export const Search = ({ dark, name, setName, setData }) => {
     const [error, setError] = useState("")
 
+    const keyPress = (e) => {
+        if (e.key === 'Enter') {
+            setName('')
+            fetchAPI()
+        }
+    }
 
     useEffect(() => {
-        Axios.get(`https://api.github.com/users/${name}`, {
+        Axios.get(`https://api.github.com/users/datodia`, {
             method: 'GET',
             headers: {
                 Authorization: "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"
@@ -28,6 +34,7 @@ export const Search = ({ dark, name, setName, setData }) => {
             }
         })
             .then((res) => {
+                setName('')
                 setData(res.data)
                 console.log(res.data)
                 setError("")
@@ -43,7 +50,7 @@ export const Search = ({ dark, name, setName, setData }) => {
     return (
         <Wrapper dark={dark}>
             <Img src='assets/search.svg' />
-            <Input onChange={(e) => { setName(e.target.value) }} dark={dark} placeholder='Search GitHub username…' />
+            <Input onKeyPress={keyPress} value={name} onChange={(e) => { setName(e.target.value) }} dark={dark} placeholder='Search GitHub username…' />
             <Error>{error}</Error>
             <Button onClick={fetchAPI}>Search</Button>
         </Wrapper>
