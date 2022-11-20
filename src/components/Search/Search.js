@@ -15,10 +15,7 @@ export const Search = ({ dark, name, setName, setData }) => {
 
     useEffect(() => {
         Axios.get(`https://api.github.com/users/datodia`, {
-            method: 'GET',
-            headers: {
-                Authorization: "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"
-            }
+            method: 'GET'
         })
             .then((res) => {
                 setData(res.data)
